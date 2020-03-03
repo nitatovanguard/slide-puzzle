@@ -21,11 +21,11 @@ While the search algorithm I have described works consistently and provides an o
 
 Upon implementation, it is shown that the double-ended search is indeed faster. A typical set of results is as follows:
 
-**Double ended search:**
+**Double ended search:**      
 Number of moves: 23       
 Time taken: 25.903564453125ms         
 
-**Regular search:**
+**Regular search:**      
 Number of moves: 23    
 Time taken: 1091.1025390625ms        
 
