@@ -1,7 +1,7 @@
 # State-based Puzzle Games in Python
 ## Simulating a state-based sliding puzzle and comparing two solving algorithms
 
-This  project was inspired by [*Professor Layton and the Curious Village*](https://en.wikipedia.org/wiki/Professor_Layton_and_the_Curious_Village "Wikipedia"), a puzzle solving adventure game for the Nintendo DS. [One particular puzzle](https://layton.fandom.com/wiki/Puzzle:A_Worm%27s_Dream "Layton Wiki") involves completing a rather difficult sliding-puzzle, and makes for an intersting python excercise. For my python code, I decided to represent it in the form of a list (in a class, with other things such as width, previous state and the index of the whole) such that:
+This  project was inspired by [*Professor Layton and the Curious Village*](https://en.wikipedia.org/wiki/Professor_Layton_and_the_Curious_Village "Wikipedia"), a puzzle solving adventure game for the Nintendo DS. [One particular puzzle](https://layton.fandom.com/wiki/Puzzle:A_Worm%27s_Dream "Layton Wiki") involves completing a rather difficult sliding-puzzle, and makes for an intersting python excercise. For my python code, I decided to represent it in the form of a list (in a class, with other things such as width, previous state and the index of the hole) such that:
 
 ![Starting Puzzle](/wormpuzzlegraphic.png)
 
@@ -9,7 +9,7 @@ Here, each number represents a different tile, with zeros in place of the two id
 
 ![Puzzle Solution](/wormsolutiongraphic.png)
 
-In order to find the shortest possible path from the first list to the second, I use a breadth-first search. This is done using a function in the class (apply_moves), which is combined with get_legal_moves to find which moves can be performed then putting these states on a kind of to-do list. States are then popped of the left of the list to be investigated for their legal moves.
+In order to find the shortest possible path from the first list to the second, I use a breadth-first search. This is done using a function in the class (apply_moves), which is combined with get_legal_moves to find which moves can be performed then putting these states on a kind of to-do list. States are then popped off the left of the list to be investigated for their legal moves.
 
 When a state which has already been investigated is reached, it and its next possible moves are ignored. This avoids repeatedly checking the same states multiple times.
 
